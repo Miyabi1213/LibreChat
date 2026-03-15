@@ -1,0 +1,25 @@
+version: 1.2.1
+
+cache: true
+
+endpoints:
+  custom:
+    - name: "GPUStack"
+       
+      # baseURL: "https://gstack.ithu.tw/v1/"
+      baseURL: "http://host.docker.internal:11434/v1"
+      
+      #  GPUStack API 
+      # apiKey: "gpustack_61032d98838fa52d_c187cb925f56a9c064617937a9d81120"
+      apiKey: "ollama"
+      
+      models:
+        # 模型名稱
+        default: ["gpt-oss-20b-gguf","gpt-oss-120b-gguf"]
+        # 抓取其他可用模型
+        fetch: true
+      
+      # 介面設定
+      titleConvo: true
+      titleModel: "current_model"
+      modelDisplayLabel: "Local GPU"
